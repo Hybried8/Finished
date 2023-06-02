@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Finished!</title>
+	<!-- CSS Import -->
+	<link rel="stylesheet" href="main.css" />
+	<!-- End of CSS Import -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+		rel="stylesheet">
+	<!-- End of Fonts -->
+</head>
+
+<body>
+	<btt class="dark-light">
+		<div class="div-dark-mode">
+			<i onclick="darkMode()" class="bx bxs-moon moon-icon" id="themeToggler" title="toggle theme"></i>
+		</div>
+	</btt>
+	<!-- App Wrapper -->
+	<main class="app">
+		<!-- Greeting -->
+		<section class="greeting">
+			<h2 class="title">
+				HI!!, <input type="text" id="name" placeholder="What should I call you?" />
+			</h2>
+		</section>
+		<!-- End of Greeting -->
+
+		<!-- New Todo -->
+		<section class="create-todo">
+			<h3>Create a List</h3>
+			<form id="new-todo-form">
+				<h4>What do you need to remember?</h4>
+				<input type="text" placeholder="e.g. Walk the dog" name="content" id="content" />
+
+				<h4>Pick a category</h4>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="business" />
+						<span class="bubble business"></span>
+						<div>Work</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal</div>
+					</label>
+				</div>
+
+				<input type="submit" value="Add task" />
+			</form>
+		</section>
+		<!-- End of New Todo -->
+
+		<!-- Todo List -->
+		<section class="todo-list">
+			<h3>Task list</h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+		<!-- End of Todo List -->
+
+	</main>
+	<!-- End of App Wrapper -->
+	<script>
+		function darkMode() {
+			var element = document.body;
+			element.classList.toggle("dark-mode");
+		}
+	</script>
+
+	<!-- JS Import -->
+	<script src="main.js"></script>
+	<!-- End of JS Import -->
+</body>
+
+</html>
